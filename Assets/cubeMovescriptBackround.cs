@@ -19,10 +19,12 @@ public class cubeMovescriptBackround : MonoBehaviour
     {
         if (timer < spawnRate)
         {
+            Debug.Log("Timer +1");
             timer = timer + Time.deltaTime;
         }
         else
         {
+            Debug.Log("move");
             Instantiate(gameObject, transform.position, transform.rotation);
             timer = 0;              
         }

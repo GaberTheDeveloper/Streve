@@ -16,10 +16,12 @@ public class CubeMoveBackround : MonoBehaviour
     void Update()
     {
         transform.position = transform.position + (Vector3.right * moveSpeed) * Time.deltaTime;
+        Debug.Log("move right");
 
-        if (transform.position.x < deadZone)
+        if (transform.position.x > deadZone)
         {
             Destroy(gameObject);
+            Debug.Log("destroy");
         }
     }
 }
